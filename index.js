@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 var port = 8001;
 
+
 /*nodejs 부트스트랩 불러오기*/
 app.use(express.static(path.join(__dirname, 'www')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules', 'bootstrap', 'dist', 'js')));
