@@ -1,6 +1,7 @@
 const links = {
     home: "public/index.html",
-    login: "public/html/login.html"
+    login: "public/html/login.html",
+    membership: "public/html/membership.html",
 }
 
 module.exports = links;
