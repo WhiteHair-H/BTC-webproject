@@ -4375,10 +4375,17 @@ fieldset:disabled .btn {
     padding-bottom: 0.5rem;
 }
 
+
+/*네비메뉴 고치는곳*/
+
 .navbar-collapse {
     flex-basis: 100%;
     flex-grow: 1;
     align-items: center;
+}
+
+p {
+    margin: 0px;
 }
 
 .navbar-toggler {

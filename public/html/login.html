@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/bootstrap.css" rel="stylesheet">
     <script src="../js/bootstrap.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="../css/navbar.css">
     <title>Document</title>
 </head>
@@ -15,7 +17,7 @@
     <!-- Navigation Start-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="/"><img src="../img/logo/btc_logo.png" alt="..." /></a>
+            <a class="navbar-brand" id="LogoLink" href="/"><img id="LogoLink" src="../img/logo/btc_logo.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars ms-1"></i>
@@ -52,17 +54,33 @@
                     </li>
 
 
-                    <li class="nav-item"><a class="nav-link" href="/about">교육소개</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/recruit">교육생 모집</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/process">교육과정</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/reference">자료실</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/news">News/공지</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/news">로그인</a></li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/about">교육소개</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/recruit">교육생 모집</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/process">교육과정</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/reference">자료실</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/news">News/공지</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" id="login" href="/login">로그인</p>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Navigation END-->
+    <h1>hi</h1>
+    <!--js파일연결-->
+    <script src="../../models/pages.js"></script>
+
 </body>
 
 </html>

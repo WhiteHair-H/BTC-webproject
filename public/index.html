@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <script src="../js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../css/navbar.css">
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="./js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="./css/navbar.css">
     <title>Document</title>
 
 
@@ -17,7 +18,7 @@
     <!-- Navigation Start-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="/"><img src="../img/logo/btc_logo.png" alt="..." /></a>
+            <a class="navbar-brand" id="LogoLink" href="/"><img src="./img/logo/btc_logo.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
@@ -26,7 +27,7 @@
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
 
                     <li class="nav-item dropdown" id="myDropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">서비스 및 제품소개</a>
+                        <p class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">서비스 및 제품소개</p>
                         <ul class="dropdown-menu">
                             <li> <a class="dropdown-item" href="/services/services_1">매니지드 서비스</a></li>
                             <li> <a class="dropdown-item" href="/services/services_2">마이그레이션 옵스</a></li>
@@ -54,12 +55,24 @@
                     </li>
 
 
-                    <li class="nav-item"><a class="nav-link" href="/about">교육소개</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/recruit">교육생 모집</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/process">교육과정</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/reference">자료실</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/news">News/공지</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./login.html">로그인</a></li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/about">교육소개</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/recruit">교육생 모집</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/process">교육과정</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/reference">자료실</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" href="/news">News/공지</p>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" id="login" href="/login">로그인</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -68,7 +81,7 @@
     <header>
         <h1>fggdfdfd</h1>
     </header>
-
+    <script src="../models/pages.js"></script>
 </body>
 
 </html>
