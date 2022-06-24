@@ -4,7 +4,7 @@ var path = require('path');
 var port = 8001;
 
 var bodyParser = require('body-parser');
-var fs = require('fs');
+var fs = require('fs'); // 파일 읽기.
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,7 +19,7 @@ app.use('/css', express.static(path.join(__dirname, 'node_modules', 'bootstrap',
 //app.use(express.static('static'));
 
 /*ajax start*/
-let links = require('./models/link'); //..............ajax링크 파일 모듈 연결
+let links = require('./models/link'); //..............ajax링크 파일 모듈 연결 require가 모듈을 포함하는 함수이다.
 app.use(express.static('public')); //.................클라이언트의 연결 요청이 들어오면 public 폴더에서 index.html 파일을 찾아 클라이언트한테 줌.
 app.get('/:id', function(req, res) { //...............(경로, 함수) 경로로 get 요청이 들어오면 함수를 실행
     let id = req.params.id; //........................동적요청 요청에 대한 파라미터 request 데이터를 id에 대입.
