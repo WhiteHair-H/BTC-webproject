@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <script src="../js/bootstrap.js"></script>
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <script src="../../js/bootstrap.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/login.css">
     <title>Document</title>
 </head>
 
@@ -18,7 +18,7 @@
     <!-- Navigation Start-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" id="LogoLink" href="/"><img id="LogoLink" src="../img/logo/btc_logo.png" alt="..." /></a>
+            <a class="navbar-brand" id="LogoLink" href="/"><img id="LogoLink" src="../../img/logo/btc_logo.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars ms-1"></i>
@@ -29,12 +29,12 @@
                     <li class="nav-item dropdown" id="myDropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">서비스 및 제품소개</a>
                         <ul class="dropdown-menu">
-                            <li> <a class="dropdown-item" href="/services/services_1">매니지드 서비스</a></li>
-                            <li> <a class="dropdown-item" href="/services/services_2">마이그레이션 옵스</a></li>
-                            <li> <a class="dropdown-item" href="/services/services_3">데브 옵스</a></li>
-                            <li> <a class="dropdown-item" href="/services/services_4">데이터 옵스</a></li>
-                            <li> <a class="dropdown-item" href="/services/services_5">섹 옵스</a></li>
-                            <li> <a class="dropdown-item" href="/services/services_6">핀 옵스</a></li>
+                            <li> <a class="dropdown-item" id="services_1" href="/views/service_product/services_1.html">Managed service</a></li>
+                            <li> <a class="dropdown-item" id="services_2" href="/views/service_product/services_2.html">Migration Ops</a></li>
+                            <li> <a class="dropdown-item" id="services_3" href="/views/service_product/services_3.html">DevOps</a></li>
+                            <li> <a class="dropdown-item" id="services_4" href="/views/service_product/services_4.html">DataOps</a></li>
+                            <li> <a class="dropdown-item" id="services_5" href="/views/service_product/services_5.html">SecOps</a></li>
+                            <li> <a class="dropdown-item" id="services_6" href="/views/service_product/services_6.html">PinOps</a></li>
 
                             <!-- <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
                      <ul class="submenu dropdown-menu">
@@ -55,18 +55,18 @@
                     </li>
 
 
-                    <li class="nav-item"><a class="nav-link" href="/about">비용분석</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/recruit">기술공유 게시판</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/process">가이드</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/reference">자료실</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/news">News/공지</a></li>
+                    <li class="nav-item"><a class="nav-link" id="about" href="/about">비용분석</a></li>
+                    <li class="nav-item"><a class="nav-link" id="recruit" href="/recruit">기술공유 게시판</a></li>
+                    <li class="nav-item"><a class="nav-link" id="process" href="/process">가이드</a></li>
+                    <li class="nav-item"><a class="nav-link" id="reference" href="/reference">자료실</a></li>
+                    <li class="nav-item"><a class="nav-link" id="news" href="/news">News/공지</a></li>
                     <li class="nav-item"><a class="nav-link" id="login" href="/login">로그인</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Navigation END-->
-    <header class="login_header">
+    <!-- <header class="login_header">
         <div class="container">
             <form>
                 <div class="row mb-3">
@@ -104,9 +104,10 @@
 
             </form>
         </div>
-    </header>
+    </header> -->
+    <h1> DataOps </h1>
     <!--js파일연결-->
-    <script src="../../models/pages.js"></script>
+    <script src="../../../models/pages.js"></script>
 
 </body>
 

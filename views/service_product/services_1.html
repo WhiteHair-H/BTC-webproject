@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <script src="../../js/bootstrap.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navigation Start-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" id="LogoLink" href="/"><img id="LogoLink" src="../../img/logo/btc_logo.png" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+
+                    <li class="nav-item dropdown" id="myDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">서비스 및 제품소개</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" id="services_1" href="/views/service_product/services_1.html">Managed service</a></li>
+                            <li> <a class="dropdown-item" id="services_2" href="/views/service_product/services_2.html">Migration Ops</a></li>
+                            <li> <a class="dropdown-item" id="services_3" href="/views/service_product/services_3.html">DevOps</a></li>
+                            <li> <a class="dropdown-item" id="services_4" href="/views/service_product/services_4.html">DataOps</a></li>
+                            <li> <a class="dropdown-item" id="services_5" href="/views/service_product/services_5.html">SecOps</a></li>
+                            <li> <a class="dropdown-item" id="services_6" href="/views/service_product/services_6.html">PinOps</a></li>
+
+                            <!-- <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+                     <ul class="submenu dropdown-menu">
+                       <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
+                       <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                       <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                         <ul class="submenu dropdown-menu">
+                           <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                           <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                         </ul>
+                       </li>
+                       <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                       <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                     </ul>
+                   </li> -->
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item"><a class="nav-link" id="about" href="/about">비용분석</a></li>
+                    <li class="nav-item"><a class="nav-link" id="recruit" href="/recruit">기술공유 게시판</a></li>
+                    <li class="nav-item"><a class="nav-link" id="process" href="/process">가이드</a></li>
+                    <li class="nav-item"><a class="nav-link" id="reference" href="/reference">자료실</a></li>
+                    <li class="nav-item"><a class="nav-link" id="news" href="/news">News/공지</a></li>
+                    <li class="nav-item"><a class="nav-link" id="login" href="/login">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation END-->
+    <!-- <header class="login_header">
+        <div class="container">
+            <form>
+                <div class="row mb-3">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail3">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3">
+                    </div>
+                </div>
+                <fieldset class="row mb-3">
+                    <legend class="col-form-label col-sm-2 pt-0">company</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                        Bespinglobal
+                      </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                        BTC
+                      </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary">Sign in</button>
+                <p type="test" id="membership" class="btn btn-primary" href="/membership">회원가입</p>
+
+            </form>
+        </div>
+    </header> -->
+    <h1> Managed service </h1>
+    <!--js파일연결-->
+    <script src="../../../models/pages.js"></script>
+
+</body>
+
+</html>
