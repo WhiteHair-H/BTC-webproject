@@ -1,9 +1,9 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'SANGMIN',
+    user: 'dana',
     password: '1234',
-    database: 'BTCWEB'
+    database: 'testdb'
 });
 
 connection.connect();

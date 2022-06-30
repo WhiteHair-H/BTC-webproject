@@ -69,23 +69,34 @@ app.post('/dbinsert_post', function (req, res) {
 
 
 // login
-// app.post('/login', function(req,res){
+app.post('/login', function(req,res){
 
-//     var email = req.body.inputEmail3;
-//     var pass = req.body.inputPassword3;
+    var email = req.body.inputEmail3;
+    var pass = req.body.inputPassword3;
     
-//     var mysql = require('mysql');
-//     var connection = mysql.createConnection({
-//         host: 'localhost',
-//         user: 'dana',
-//         password: '1234',
-//         database: 'testdb'
-//     });
+    var mysql = require('mysql');
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'dana',
+        password: '1234',
+        database: 'testdb'
+    });
 
-//     //connection.
+    var select = `insert into users values ('${mail}','${pass}');`
+
+    connection.connect();
+
+    connection.query(select, function (error, results, fields) {
+        if (error) {
+            console.log(error);
+        }
+        console.log('The solution is: ', results);
+    });
+
+    connection.end();
     
     
-// })
+})
 
    
 
