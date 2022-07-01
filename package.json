@@ -13,16 +13,18 @@
     "bootstrap": "^5.1.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "http": "^0.0.1-security",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.18",
     "socket.io": "^4.5.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Error-Min/BTC-webproject.git"
+    "url": "git+https://github.com/WhiteHair-H/BTC-webproject.git"
   },
   "bugs": {
-    "url": "https://github.com/Error-Min/BTC-webproject/issues"
+    "url": "https://github.com/WhiteHair-H/BTC-webproject.git/issues"
   },
-  "homepage": "https://github.com/Error-Min/BTC-webproject#readme"
+  "homepage": "https://github.com/WhiteHair-H/BTC-webproject.git#readme"
 }

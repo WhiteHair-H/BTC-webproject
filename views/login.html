@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/bootstrap.css" rel="stylesheet">
     <script src="../js/bootstrap.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/login.css">
@@ -29,12 +29,12 @@
                     <li class="nav-item dropdown" id="myDropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">서비스 및 제품소개</a>
                         <ul class="dropdown-menu">
-                            <li> <a class="dropdown-item" id="services_1" href="/views/service_product/services_1.html">Managed service</a></li>
-                            <li> <a class="dropdown-item" id="services_2" href="/views/service_product/services_2.html">Migration Ops</a></li>
-                            <li> <a class="dropdown-item" id="services_3" href="/views/service_product/services_3.html">DevOps</a></li>
-                            <li> <a class="dropdown-item" id="services_4" href="/views/service_product/services_4.html">DataOps</a></li>
-                            <li> <a class="dropdown-item" id="services_5" href="/views/service_product/services_5.html">SecOps</a></li>
-                            <li> <a class="dropdown-item" id="services_6" href="/views/service_product/services_6.html">PinOps</a></li>
+                            <li> <a class="dropdown-item" id="Managed_service" href="/Managed_service">Managed service</a></li>
+                            <li> <a class="dropdown-item" id="Migration_Ops" href="/Migration_Ops">Migration Ops</a></li>
+                            <li> <a class="dropdown-item" id="DevOps" href="/DevOps">DevOps</a></li>
+                            <li> <a class="dropdown-item" id="DataOps" href="/DataOps">DataOps</a></li>
+                            <li> <a class="dropdown-item" id="SecOps" href="/SecOps">SecOps</a></li>
+                            <li> <a class="dropdown-item" id="PinOps" href="/PinOps">PinOps</a></li>
 
                             <!-- <li> <a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
                      <ul class="submenu dropdown-menu">
@@ -60,7 +60,7 @@
                     <li class="nav-item"><a class="nav-link" href="/process">가이드</a></li>
                     <li class="nav-item"><a class="nav-link" href="/reference">자료실</a></li>
                     <li class="nav-item"><a class="nav-link" href="/news">News/공지</a></li>
-                    <li class="nav-item"><a class="nav-link" id="login" href="/login">로그인</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">로그인</a></li>
                 </ul>
             </div>
         </div>
@@ -68,45 +68,46 @@
     <!-- Navigation END-->
     <header class="login_header">
         <div class="container">
-            <form>
+            <form method="post" action="/login_post">
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="text" class="form-control" name="inputEmail3">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3">
+                        <input type="text" class="form-control" name="inputPassword3">
                     </div>
                 </div>
                 <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0">company</legend>
+                    <legend class="col-form-label col-sm-2 pt-0">Company</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="gridRadios" value="Bespinglobal" checked>
                             <label class="form-check-label" for="gridRadios1">
                         Bespinglobal
                       </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <input class="form-check-input" type="radio" name="gridRadios" value="BTC">
                             <label class="form-check-label" for="gridRadios2">
                         BTC
                       </label>
                         </div>
                     </div>
                 </fieldset>
-
-                <button type="submit" class="btn btn-primary">Sign in</button>
-                <p type="test" id="membership" class="btn btn-primary" href="/membership">회원가입</p>
-
+                <div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <!-- href 사용안함 -> 자바스크립트 사용함 href="/login/membership"-->
+                    <p type="test" class="btn btn-primary" id="membership" >회원가입</p>
+                </div>
             </form>
         </div>
     </header>
     <!--js파일연결-->
-    <script src="../../models/pages.js"></script>
+    <!-- <script src="../../models/pages.js"></script> -->
 
 </body>
 

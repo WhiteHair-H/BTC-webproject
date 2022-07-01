@@ -10,12 +10,12 @@ const links = {
     news: "views/news.html",
 
     /* 서비스 및 제품 서비스 */
-    services_1: "views/service_product/services_1.html",
-    services_2: "views/service_product/services_2.html",
-    services_3: "views/service_product/services_3.html",
-    services_4: "views/service_product/services_4.html",
-    services_5: "views/service_product/services_5.html",
-    services_6: "views/service_product/services_6.html",
+    Managed_service: "views/service_product/Managed_service.html",
+    Migration_Ops: "views/service_product/Migration_Ops.html",
+    DevOps: "views/service_product/DevOps.html",
+    DataOps: "views/service_product/DataOps.html",
+    SecOps: "views/service_product/SecOps.html",
+    PinOps: "views/service_product/PinOps.html",
 
 }
 
