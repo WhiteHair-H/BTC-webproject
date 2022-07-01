@@ -104,7 +104,6 @@ app.post('/login_post', function(req,res){
             if (results.length > 0) {
                 //req.session.loggedin = true;
                 //req.session.username = username;
-                
                 //res.redirect('/');
                 //res.send("<script>alert('로그인되었습니다.')</script>");
                 res.send('<script type="text/javascript">alert("로그인 되었습니다."); document.location.href="/";</script>');

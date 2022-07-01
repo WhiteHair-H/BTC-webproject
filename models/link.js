@@ -1,13 +1,13 @@
 // 링크를 통한 각 메뉴들 html 경로
 const links = {
     home: "public/index.html",
-    login: "views/login.html",
-    membership: "views/membership.html",
-    about: "views/about.html",
-    recruit: "views/recruit.html",
-    process: "views/process.html",
-    reference: "views/reference.html",
-    news: "views/news.html",
+    login: "views/logins/login.html",
+    membership: "views/logins/membership.html",
+    about: "views/menu/about.html",
+    recruit: "views/menu/recruit.html",
+    process: "views/menu/process.html",
+    reference: "views/menu/reference.html",
+    news: "views/menu/news.html",
 
     /* 서비스 및 제품 서비스 */
     Managed_service: "views/service_product/Managed_service.html",
