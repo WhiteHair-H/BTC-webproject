@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/WhiteHair-H/BTC-webproject.git/issues"
   },
-  "homepage": "https://github.com/WhiteHair-H/BTC-webproject.git#readme"
+  "homepage": "https://github.com/WhiteHair-H/BTC-webproject.git#readme",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
 }

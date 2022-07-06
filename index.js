@@ -36,7 +36,6 @@ app.get('/:id', function (req, res) { //...............(경로, 함수) 경로�
 
 // 회원가입
 // DB Insert
-// TODO : DB Data와 Input 데이터의 일치값을 비교하는 쿼리문 필요
 // TODO : 비밀번호 확인 함수
 app.post('/dbinsert_post', function (req, res) {
     // html name 값을 변수에 삽입
@@ -101,6 +100,7 @@ app.post('/login_post', function (req, res) {
     // 이메일과 비번 name 변수값 저장
     var mail = req.body.inputEmail3;
     var pass = req.body.inputPassword3;
+    var com = req.body.gridRadios
 
     // 이메일과 비번 입력값 출력(입력값이 제대로 출력되는 테스트)
     console.log(mail, pass)
@@ -118,11 +118,11 @@ app.post('/login_post', function (req, res) {
     connection.connect();
 
     // 입력값의 메일과 비번을 비교하여 로그인이 될 수 있게 만드는 구문
-    // 만약 메일과 비번이 DB 조회를 통해 입력값과 비교를 하고
+    // 만약 이메일과 비번, 회사의 DB 조회를 통해 입력값과 비교를 하고
     // 에러가 발생하면 에러 로그를 발생시킨 뒤
     // 결과값의 길이가 0보다 클 경우 로그인이 되도록 구성
     if (mail && pass) {
-        connection.query('SELECT * FROM users WHERE u_mail = ? AND u_password = ?', [mail, pass], function (error, results, fields) {
+        connection.query('SELECT * FROM users WHERE u_mail = ? AND u_password = ? AND u_company = ?', [mail, pass, com], function (error, results, fields) {
             if (error) throw error;
             if (results.length > 0) {
                 //req.session.loggedin = true;
@@ -135,8 +135,14 @@ app.post('/login_post', function (req, res) {
                 res.send('<script type="text/javascript">alert("로그인 정보가 일치하지 않습니다."); document.location.href="/login";</script>');
             }
         });
-    } else {
-        res.send('<script type="text/javascript">alert("email과 password를 입력하세요!"); document.location.href="/login";</script>');
+    } else if(!mail && !pass){
+        res.send('<script type="text/javascript">alert("Email과 Password를 입력하세요!"); document.location.href="/login";</script>');
+        res.end();
+    } else if(!pass){
+        res.send('<script type="text/javascript">alert("Password를 입력하세요!"); document.location.href="/login";</script>');
+        res.end();
+    }else if(!mail){
+        res.send('<script type="text/javascript">alert("Email을 입력하세요!"); document.location.href="/login";</script>');
         res.end();
     }
 })
