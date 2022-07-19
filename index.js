@@ -22,8 +22,6 @@ app.use('/css', express.static(path.join(__dirname, 'node_modules', 'bootstrap',
 /*ajax start*/
 let links = require('./models/link'); //..............ajax링크 파일 모듈 연결 require가 모듈을 포함하는 함수이다.
 const { Router } = require('express');
-//const { Client } = require('socket.io/dist/client');
-//const { Client } = require('socket.io/dist/client');
 app.use(express.static('public')); //.................클라이언트의 연결 요청이 들어오면 public 폴더에서 index.html 파일을 찾아 클라이언트한테 줌.
 app.get('/:id', function (req, res) { //...............(경로, 함수) 경로로 get 요청이 들어오면 함수를 실행
     let id = req.params.id; //........................동적요청 요청에 대한 파라미터 request 데이터를 id에 대입.
@@ -53,7 +51,7 @@ app.post('/dbinsert_post', function (req, res) {
         // 메시지 박스 띄움
         res.write("<script>alert('모든 정보를 입력해주세요.')</script>")
         // 메시지 박스가 띄워지고 나서 제자리로 돌아감
-        return res.write("<script>window.location=\"/membership\"</script>");
+        return res.write("<script>window.location=\"/login\"</script>");
     }
 
     // DB 커넥션 생성후 자신이 생성한 호스트, 유저, 비번, DB 입력
@@ -73,7 +71,6 @@ app.post('/dbinsert_post', function (req, res) {
 
     connection.query('SELECT * FROM users WHERE u_mail = ?', [mail], function (error, results, fields) {
         if (results.length == 0) {
-            // 한글 깨짐 방지
             res.writeHead(200, { 'Content-Type': 'text/html;charset=UTF-8' });
             res.write("<script>alert('회원가입성공')</script>");
 
@@ -88,7 +85,7 @@ app.post('/dbinsert_post', function (req, res) {
         }else{
             res.writeHead(200, { 'Content-Type': 'text/html;charset=UTF-8' });
             res.write("<script>alert('회원가입실패')</script>");
-            res.write("<script>window.location=\"/membership\"</script>");
+            res.write("<script>window.location=\"/login\"</script>");
         }
     })
 })
